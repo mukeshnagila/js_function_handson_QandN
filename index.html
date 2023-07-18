@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Handson Questions-Answers</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Function Question-Answer Handson</h1>
+    <div class="container">
+        <div class="QandN">
+            <h2>Q.1 - Create one function with zero parameter having a console statement...?</h2><br>
+            <h3>Ans - 
+                <pre>
+                function zeroParameter() {
+                    console.log("Hello This function with zero parameters.");
+                  }
+                  zeroParameter();
+                    </pre>
+            </h3>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.2 - Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"...?</h2><br>
+            <h3>Ans - 
+                <pre>
+                    function sum(a, b) {
+                        console.log(`Sum of ${a}, ${b} is ${a + b}`);
+                      }
+                      sum(3, 4);
+                    </pre>
+            </h3>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.3 - Create one arrow function...?</h2><br>
+            <h3>Ans - 
+                <pre>
+                    const arrowFunction = () => {
+                        console.log("This is the arrow function.");
+                      };
+                      arrowFunction();                      
+                    </pre>
+            </h3>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>The arrow function is a concise way to define a function in JavaScript. In this case, the arrowFunction does not accept any parameters. When invoked using arrowFunction(), it logs the message "This is an arrow function."</p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.4 - <pre>
+                "Print output: 
+                    var x = 21;
+                    var girl = function () {
+                        console.log(x);
+                        var x = 20;
+                    };
+                    girl ();" .........?                  
+                </pre></h2><br>
+            <h3>Ans - 
+                <pre>       It's prints "undefined" to the console.</pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                    This code declares a variable named x and assigns it the value of 21. It also defines a function called "girl". Inside the function, it logs the value of x to the console. However, before logging the value, a new variable x is declared and assigned the value of 20 within the function's scope. Finally, the "girl" function is called And the output is Undefined..</p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.5 - <pre>
+                "Print output: 
+                    var x = 21;
+                    girl ();
+                    console.log(x)
+                    function girl() {
+                        console.log(x);
+                        var x = 20;
+                    };" .........?                  
+                </pre></h2><br>
+            <h3>Ans - 
+                <pre>       It's prints "undefined" And after that "21"..</pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                    In this code, a global variable x is declared and assigned the value of "21". Then, the girl() function is called. Inside the function, a local variable "x" is declared, overshadowing the global "x". The first "console.log(x)" statement inside the function tries to access the local "x", but since it is declared but not assigned a value yet, its value is "undefined". After the function call, the "console.log(x)" statement outside the function logs the value of the global "x", which is "21". Therefore, the output is "undefined" And "21"...</p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.6 - <pre>
+                "Print output
+                    var x = 21;
+                    a();
+                    b();
+
+                    function a() {
+                        
+                    x = 20;
+                    console.log(x);
+                    };
+                    function b() {
+                        
+                        x = 40;
+                    console.log(x);
+                    };" .........?                  
+                </pre></h2><br>
+            <h3>Ans - 
+                <pre>       It's prints "20" And "40" to the console.</pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                    In this code, a global variable "x" is declared and assigned the value of "21". Then, two functions a() and b() are defined and called.
+                    Inside the a() function, the global variable "x" is reassigned the value of "20". The "console.log(x)" statement logs the value of "x", which is "20". 
+                    Inside the b() function, the global variable "x" is again reassigned, this time to the value of "40". The "console.log(x)" statement logs the updated value of "x", which is "40". Therefore, the output of this code will be "20" & "40"..</p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.7 - Write a function that accepts parameter n and returns factorial of n</h2><br>
+            <h3>Ans - 
+                <pre>       
+                    def factorial(n):
+                        if n == 0 or n == 1:
+                            return 1
+                        else:
+                    return n * factorial(n-1)
+
+                </pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                    The factorial of a number 'n' is the product of all positive integers from '1' to 'n'. In the given function, we use recursion to calculate the factorial. If n is 0 or '1', the factorial is defined as '1'. Otherwise, we multiply 'n' with the factorial of 'n-1'. 
+                    This process continues recursively until n becomes '0' or '1', and then the final factorial value is returned...
+                </p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.8 - <pre>
+                "Guess the Output
+
+                    function FindSum(a, b){
+                        return a + b;
+                    }
+
+                    function DisplayData(data, batch){
+                        console.log(`i am from ${data} and My batch is EA${batch}`)
+                    }
+
+                    DisplayData(""PrepBytes"", FindSum(10, 9));" .........?                  
+                </pre></h2><br>
+            <h3>Ans - 
+                <pre>          i am from PrepBytes and My batch is EA19.</pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                    The code defines two functions: "FindSum" and "DisplayData". The "FindSum" function takes two parameters 'a' and 'b' and returns their 'sum'. The "DisplayData" function takes two parameters data and batch, and it uses template literals to log a string to the console.<br>
+
+                    In the given code, "DisplayData" is called with two arguments: ""PrepBytes"" and the result of FindSum(10, 9).<br>
+
+                    "FindSum(10, 9)" evaluates to '19'.<br>
+                    The template literal in "DisplayData" uses the values "PrepBytes" and "19" to form the string "i am from PrepBytes and My batch is EA19".<br>
+                    This string is then logged to the console.
+                    Hence, the output of the code is "i am from PrepBytes and My batch is EA19"...
+                </p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.9 - <pre>
+                "Guess the output
+
+                    Abc();
+                    const Abc = function(){
+                        let value = 20;
+                        console.log(value);
+                    }" .........?                  
+                </pre></h2><br>
+            <h3>Ans - 
+                <pre>         ReferenceError: Cannot access 'Abc' before initialization.</pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                    The code tries to call the function "Abc()" before it is declared and initialized. In JavaScript, when a variable is declared with 'const' or 'let', it is not hoisted to the top of the scope. Therefore, attempting to access the 'Abc' function before its declaration results in a ReferenceError...</p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.10 - <pre>
+                "Guess the output
+
+                    var a = 10;
+                    (function (){
+                        console.log(a);
+                        var a = 20;
+                    })();".........?                  
+                </pre></h2><br>
+            <h3>Ans - 
+                <pre>      It's prints undefined.</pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                  The code declares a variable a and assigns it a value of "10". Then, it defines an immediately invoked function expression (IIFE). Inside the IIFE, a new variable "a" is declared and assigned a value of "20". However, due to JavaScript's hoisting behavior, 
+                  the declaration of the local variable a is hoisted to the top of the function scope, but the assignment '(var a = 20)' is not hoisted.
+                  Therefore, when "console.log(a)" is executed, the local variable a exists but hasn't been assigned a value yet. As a result, the value of a is "undefined" at that point  ...</p>
+            </div>
+        </div><br><hr><br>
+
+        <div class="QandN">
+            <h2>Q.11 - <pre>
+                "Guess the Output
+                    const greet =  function(name){
+                        return function(m){
+                        
+                            console.log(`Hi!! ${name}, ${m}`);
+                        }
+                    }
+                    const greet_message = greet('EA19');
+                    greet_message(""Welcome To PrepBytes"")".........?                  
+                </pre></h2><br>
+            <h3>Ans - 
+                <pre>        Hi!! EA19, Welcome To PrepBytes.</pre>
+            </h3><br>
+            <div class="explain">
+                <h4>Explain--</h4><br>
+                <p>
+                  The code defines a function greet that takes a 'name' parameter and returns another function. The returned function takes a parameter "m" and logs a string to the console using template literals.<br>
+
+                  When "greet('EA19')" is called, it returns the inner function, which is then assigned to the variable "greet_message".<br>
+
+                  Finally, when greet_message("Welcome To PrepBytes") is called, the inner function is executed. It logs the message "Hi!! EA19, Welcome To PrepBytes" to the console....</p>
+            </div>
+        </div><br><hr><br>
+
+    </div>
+    
+</body>
+</html>
